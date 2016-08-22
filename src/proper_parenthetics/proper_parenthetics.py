@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Proper Parenthetics code challenge."""
 from __future__ import unicode_literals
+import sys
 """My first programming language was Lisp. If you’re at all familiar with it, you’ll probably know that in Lisp there are a lot of parentheses.
 
 Your assignment is to build a quick Python function incorporating one of this week’s data structures that takes a unicode string (text) as input and returns one of three possible values:
@@ -21,7 +22,35 @@ After you’ve added your code solution into GitHub, send a pull request to your
 Use the comment box in Canvas to add any questions, comments or reflections on this assignment and your approach to it."""
 
 
-
-
 def proper_parens(input_string):
-    pass
+    """Count parens in string and return an integer.
+
+    Closing parens ) must be proceeded by open parens ( in order
+    to count as pairs.
+    If ((() function will return 1.
+    If ())) function will return -1.
+    If ((())) function will return 0.
+
+    I'm opting to use a doubly-linked list for this, because I want to slice
+    the input string into managable pieces and parse through them in order.
+    The DLL allows me to push into the head and read from the tail easily.
+
+
+    split string into words and push into data structure
+    evaluate each item in there and increment counters, using regular expression?
+    """
+    sys.path.insert(0, 'data_structures')
+    from linked_list import LinkedList
+    parens_ll = LinkedList()
+    while len(input_string) > 0:
+        parens_ll.push(input_string.slice(" ", 1))
+
+    parens_open = 0
+    parens_closed = 0
+
+    while len(parens_ll) > 0:
+        current = parens_ll.pop()
+        if
+
+
+    return score
