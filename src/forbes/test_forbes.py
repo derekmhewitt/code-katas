@@ -2,8 +2,9 @@
 
 """Test forbes.py code."""
 from __future__ import unicode_literals
+import os
 
-BILLIONAIRES_FILENAME = "./forbes_billionaires.json"
+BILLIONAIRES_FILENAME = os.path.abspath("src/forbes/forbes_billionaires.json")
 
 TEST_BILLIONAIRE = """{
     "name": "Amancio Ortega",
