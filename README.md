@@ -15,7 +15,12 @@ Stretch Goals:
 Write another function that takes the company owned by the oldest under 80 and youngest billionaire and scrapes the web for its current stock price. If the company is not public, have an appropriate message. If the company is not an actual company, have an appropriate message.
 ```
 
-I solved this kata by using the Binary Heap data structure.  I loaded every billionaire under 80 into it.  The first one popped from the list was the youngest and the last one popped was the oldest.
+I solved this kata by using the Binary Heap data structure.  I loaded every billionaire with an age greater than 0 and less than 80 into it by age.  The first one popped from the list was the youngest and the last one popped was the oldest.
+
+The Heap used here is mine from the Data Structures assignments and I included its tests as well.
+
+### Cited Sources and Resources:
+I made good use of http://jsonlint.com/ to find the JSON error in the supplied file, and to setup my test data without errors.
 
 ## flight-paths
 
