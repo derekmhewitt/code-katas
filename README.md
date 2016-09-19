@@ -1,6 +1,21 @@
 # code-katas
 CodeFellows 401, Codewars.com Katas
 
+## forbes
+
+This branch contains a solution for the the Forbes Top 40 Billionaires Kata.
+
+The goal of this assignment is to:
+```
+Write a function that, returns the name, net worth, and industry of the **oldest billionaire under 80 years old** AND the youngest billionaire with a valid age. * Oldest under 80, not including 80. * You may not use a sorting function. * You may not use any external library (you don’t need it).
+```
+
+Stretch Goals:
+```
+Write another function that takes the company owned by the oldest under 80 and youngest billionaire and scrapes the web for its current stock price. If the company is not public, have an appropriate message. If the company is not an actual company, have an appropriate message.
+```
+
+I solved this kata by using the Binary Heap data structure.  I loaded every billionaire under 80 into it.  The first one popped from the list was the youngest and the last one popped was the oldest.
 
 ## flight-paths
 
