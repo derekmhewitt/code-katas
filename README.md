@@ -2,6 +2,33 @@
 CodeFellows 401, Codewars.com Katas
 
 
+## flight-paths
+
+This branch is an attempt at solving the Flight-Paths kata.
+
+Graph implementation by Justin, from here:
+https://github.com/welliam/data-structures/blob/master/src/graph.py
+
+The goal of this assignment is to:
+```
+Write a function that,
+
+given a starting city and an ending city, will return a path between the two cities (including the two cities).
+also returns the total distance traveled between cities.
+appropriately handles the situation where no path exists.
+```
+Stretch Goals:
+```
+Try to incorporate any (or all) of these. They are/can be independent of each other.
+
+Add to your function a parameter that makes it return the shortest path (lowest distance) between the two cities.
+Add to your function a parameter that makes it return the path with the fewest stops between the two cities.
+Have your function take a parameter for a limit to the distance between any two cities. If specified, your function returns a path where each city-to-city jump is less than or equal to that limit.
+```
+
+I made an attempt at sovling this one and wasn't very successful, my comments are in the flight_paths.py file.
+
+
 ## sort_cards
 
 This branch represents a solution to the Codewars.com card sorting kata found here:
