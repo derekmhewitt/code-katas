@@ -1,6 +1,38 @@
 # code-katas
 CodeFellows 401, Codewars.com Katas
 
+## autocomplete
+
+This branch contains a solution for the AutoComplete code kata found here:
+https://codefellows.github.io/sea-python-401d4/assignments/kata_autocomplete.html
+
+From that link:
+```
+Your Task is to:
+Write a callable Python class which will implement autocomplete functionality. Your class should take a list of words to be a vocabulary as an argument on initialization. It should also accept a max_completions argument, which controls the maximum number of suggested completions for a given string. The max_completions argument should default to 5.
+
+The input to the call method for the class will be the string the user has typed. When called, this class should return a list of at most max_completions suggested words. If there are more available completions than allowed, you are free to decide which to return. If there are no completions available, you should return an empty list. Your class should handle inappropriate inputs correctly.
+
+In the end, your class should be usable like so:
+```
+```
+>>> from autocomplete import AutoCompleter
+>>> vocabulary = ['fix', 'fax', 'fit', 'fist', 'full', 'finch', 'final', 'finial']
+>>> complete_me = AutoCompleter(vocabulary, max_completions=4)
+>>> complete_me('f')
+['fix', 'fax', 'fit', 'fist']
+>>> complete_me('fi')
+['fix', 'fit', 'fist', 'finch']
+>>> complete_me('fin')
+['finch', 'final', 'finial']
+>>> complete_me('finally')
+[]
+```
+
+### Cited Sources and Resources:
+My Trie tree still has an unresolved bug in it so I used Justin's tree to complete my kata:
+https://github.com/welliam/data-structures/tree/trie-traversal
+
 ## forbes
 
 This branch contains a solution for the the Forbes Top 40 Billionaires Kata.

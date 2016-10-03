@@ -1,15 +1,8 @@
 """Implement an autocomplete funciton in Python using a Trie tree data
-structure."""
+structure.
+
+See README for details."""
 from __future__ import unicode_literals
-"""
-Your Task:
-Write a callable Python class which will implement autocomplete functionality. Your class should take a list of words to be a vocabulary as an argument on initialization. It should also accept a max_completions argument, which controls the maximum number of suggested completions for a given string. The max_completions argument should default to 5.
-
-The input to the call method for the class will be the string the user has typed. When called, this class should return a list of at most max_completions suggested words. If there are more available completions than allowed, you are free to decide which to return. If there are no completions available, you should return an empty list. Your class should handle inappropriate inputs correctly.
-
-In the end, your class should be usable like so:
-
-"""
 
 
 class AutoCompleter(object):
@@ -32,7 +25,25 @@ class AutoCompleter(object):
         match the input string we initialized the class with."""
         if not isinstance(match, str):
             raise TypeError("You must input a string.")
-        from trie import Trie
+        from .trie import Trie
         self.tree = Trie()
+        output = []
         for word in self.word_list:
             self.tree.insert(word)
+        match_list = list(match)
+        tree = self.tree.words
+        reconstruct = ""
+        for letter in match_list:
+            try:
+                if tree[letter]:
+                    reconstruct += letter
+                    tree = tree[letter]
+            except KeyError:
+                return output
+        gen = self.tree.traverse()
+        for word in gen:
+            if word.find(reconstruct) == 0:
+                output.append(word)
+            if len(output) == self.max_completions:
+                break
+        return output
